@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph using the html svg</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nonei {
+            display: none;
+        }
+
+        .inputting {
+            display: flex;
+            gap: 20px;
+        }
+
+        #graphbox {
+            width: 1300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .caution {
+            background-color: rgb(219, 25, 161);
+            display: inline;
+            border: 2px solid rgb(255, 0, 0);
+            border-radius: 20px;
+            padding: 3px;
+            color: white;
+            position: sticky;
+            bottom: 20px;
+            left: 90vw;
+        }
+
+        .submit {
+            background-color: rgba(50, 152, 165, 0.959);
+            border: 2px solid rgb(1, 247, 255);
+            padding: 6px;
+            border-radius: 20px;
+            color: white;
+            font: bold;
+        }
+
+        .button {
+            width: 50px;
+            background-color: rgb(75, 75, 124);
+            border: 2px solid rgb(0, 0, 255);
+            border-radius: 20px;
+            color: white;
+            font-size: 25px;
+        }
+
+        #makingnewboxes {
+            display: flex;
+            flex-direction: column;
+            width: 95vw;
+            margin-top: 20px;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #newest {
+            border: 2px solid black;
+        }
+
+        .inputting :first-child {
+            font-size: 20px;
+            color: peru;
+        }
+
+        [type="a"] {
+            list-style-position: inside;
+            margin-left: 20px;
+        }
+
+        #selected {
+            position: fixed;
+            right: 20px;
+            bottom: 50px;
+            padding: 8px;
+            background-color: rgb(40, 77, 110);
+            color: white;
+            border: 2px solid blue;
+            border-radius: 20px;
+        }
+
+        option {
+            background-color: #1e1e1e;
+        }
+
+        .importantnotice {
+            padding: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="graphbox">
+        <svg viewbox="-200,-200,400,400" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100% ">
+            <g id="graphing">
+
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+                <polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5" />
+
+            </g>
+            <g>
+                <line x1="-200" y1="0" x2="200" y2="0" stroke="black" stroke-width="0.5" />
+                <line x1="0" y1="200" x2="0" y2="-200" stroke="black" stroke-width="0.5" />
+
+                <path
+                    d="M-200,-200 H200 M-200,-190 H200 M-200,-180 H200 M-200,-170 H200 M-200,-160 H200 M-200,-150 H200 M-200,-140 H200 M-200,-130 H200 M-200,-120 H200 M-200,-110 H200 M-200,-100 H200 M-200,-90 H200 M-200,-80 H200 M-200,-70 H200 M-200,-60 H200 M-200,-50 H200 M-200,-40 H200 M-200,-30 H200 M-200,-20 H200 M-200,-10 H200 M-200,0 H200 M-200,10 H200 M-200,20 H200 M-200,30 H200 M-200,40 H200 M-200,50 H200 M-200,60 H200 M-200,70 H200 M-200,80 H200 M-200,90 H200 M-200,100 H200 M-200,110 H200 M-200,120 H200 M-200,130 H200 M-200,140 H200 M-200,150 H200 M-200,160 H200 M-200,170 H200 M-200,180 H200 M-200,190 H200 M-200,200 H200"
+                    stroke="blue" stroke-width="0.2" />
+                <text x="0" class="yaxis" y="-200" font-family="Arial" font-size="5" fill="black">200</text><text x="0"
+                    class="yaxis" y="-190" font-family="Arial" font-size="5" fill="black">190</text><text x="0"
+                    class="yaxis" y="-180" font-family="Arial" font-size="5" fill="black">180</text><text x="0"
+                    class="yaxis" y="-170" font-family="Arial" font-size="5" fill="black">170</text><text x="0"
+                    class="yaxis" y="-160" font-family="Arial" font-size="5" fill="black">160</text><text x="0"
+                    class="yaxis" y="-150" font-family="Arial" font-size="5" fill="black">150</text><text x="0"
+                    class="yaxis" y="-140" font-family="Arial" font-size="5" fill="black">140</text><text x="0"
+                    class="yaxis" y="-130" font-family="Arial" font-size="5" fill="black">130</text><text x="0"
+                    class="yaxis" y="-120" font-family="Arial" font-size="5" fill="black">120</text><text x="0"
+                    class="yaxis" y="-110" font-family="Arial" font-size="5" fill="black">110</text><text x="0"
+                    class="yaxis" y="-100" font-family="Arial" font-size="5" fill="black">100</text><text x="0"
+                    class="yaxis" y="-90" font-family="Arial" font-size="5" fill="black">90</text><text x="0"
+                    class="yaxis" y="-80" font-family="Arial" font-size="5" fill="black">80</text><text x="0"
+                    class="yaxis" y="-70" font-family="Arial" font-size="5" fill="black">70</text><text x="0"
+                    class="yaxis" y="-60" font-family="Arial" font-size="5" fill="black">60</text><text x="0"
+                    class="yaxis" y="-50" font-family="Arial" font-size="5" fill="black">50</text><text x="0"
+                    class="yaxis" y="-40" font-family="Arial" font-size="5" fill="black">40</text><text x="0"
+                    class="yaxis" y="-30" font-family="Arial" font-size="5" fill="black">30</text><text x="0"
+                    class="yaxis" y="-20" font-family="Arial" font-size="5" fill="black">20</text><text x="0"
+                    class="yaxis" y="-10" font-family="Arial" font-size="5" fill="black">10</text><text x="0"
+                    class="yaxis" y="10" font-family="Arial" font-size="5" fill="black">0</text><text x="0"
+                    class="yaxis" y="10" font-family="Arial" font-size="5" fill="black">-10</text><text x="0"
+                    class="yaxis" y="20" font-family="Arial" font-size="5" fill="black">-20</text><text x="0"
+                    class="yaxis" y="30" font-family="Arial" font-size="5" fill="black">-30</text><text x="0"
+                    class="yaxis" y="40" font-family="Arial" font-size="5" fill="black">-40</text><text x="0"
+                    class="yaxis" y="50" font-family="Arial" font-size="5" fill="black">-50</text><text x="0"
+                    class="yaxis" y="60" font-family="Arial" font-size="5" fill="black">-60</text><text x="0"
+                    class="yaxis" y="70" font-family="Arial" font-size="5" fill="black">-70</text><text x="0"
+                    class="yaxis" y="80" font-family="Arial" font-size="5" fill="black">-80</text><text x="0"
+                    class="yaxis" y="90" font-family="Arial" font-size="5" fill="black">-90</text><text x="0"
+                    class="yaxis" y="100" font-family="Arial" font-size="5" fill="black">-100</text><text x="0"
+                    class="yaxis" y="110" font-family="Arial" font-size="5" fill="black">-110</text><text x="0"
+                    class="yaxis" y="120" font-family="Arial" font-size="5" fill="black">-120</text><text x="0"
+                    class="yaxis" y="130" font-family="Arial" font-size="5" fill="black">-130</text><text x="0"
+                    class="yaxis" y="140" font-family="Arial" font-size="5" fill="black">-140</text><text x="0"
+                    class="yaxis" y="150" font-family="Arial" font-size="5" fill="black">-150</text><text x="0"
+                    class="yaxis" y="160" font-family="Arial" font-size="5" fill="black">-160</text><text x="0"
+                    class="yaxis" y="170" font-family="Arial" font-size="5" fill="black">-170</text><text x="0"
+                    class="yaxis" y="180" font-family="Arial" font-size="5" fill="black">-180</text><text x="0"
+                    class="yaxis" y="190" font-family="Arial" font-size="5" fill="black">-190</text><text x="0"
+                    class="yaxis" y="200" font-family="Arial" font-size="5" fill="black">-200</text>
+
+                <path
+                    d="M-200,-200 V200 M-190,-200 V200 M-180,-200 V200 M-170,-200 V200 M-160,-200 V200 M-150,-200 V200 M-140,-200 V200 M-130,-200 V200 M-120,-200 V200 M-110,-200 V200 M-100,-200 V200 M-90,-200 V200 M-80,-200 V200 M-70,-200 V200 M-60,-200 V200 M-50,-200 V200 M-40,-200 V200 M-30,-200 V200 M-20,-200 V200 M-10,-200 V200 M0,-200 V200 M10,-200 V200 M20,-200 V200 M30,-200 V200 M40,-200 V200 M50,-200 V200 M60,-200 V200 M70,-200 V200 M80,-200 V200 M90,-200 V200 M100,-200 V200 M110,-200 V200 M120,-200 V200 M130,-200 V200 M140,-200 V200 M150,-200 V200 M160,-200 V200 M170,-200 V200 M180,-200 V200 M190,-200 V200 M200,-200 V200 "
+                    stroke="blue" stroke-width="0.2" />
+                <text y="10" class="xaxis" x="-200" font-family="Arial" font-size="5" fill="black">-200</text><text
+                    y="10" class="xaxis" x="-190" font-family="Arial" font-size="5" fill="black">-190</text><text y="10"
+                    class="xaxis" x="-180" font-family="Arial" font-size="5" fill="black">-180</text><text y="10"
+                    class="xaxis" x="-170" font-family="Arial" font-size="5" fill="black">-170</text><text y="10"
+                    class="xaxis" x="-160" font-family="Arial" font-size="5" fill="black">-160</text><text y="10"
+                    class="xaxis" x="-150" font-family="Arial" font-size="5" fill="black">-150</text><text y="10"
+                    class="xaxis" x="-140" font-family="Arial" font-size="5" fill="black">-140</text><text y="10"
+                    class="xaxis" x="-130" font-family="Arial" font-size="5" fill="black">-130</text><text y="10"
+                    class="xaxis" x="-120" font-family="Arial" font-size="5" fill="black">-120</text><text y="10"
+                    class="xaxis" x="-110" font-family="Arial" font-size="5" fill="black">-110</text><text y="10"
+                    class="xaxis" x="-100" font-family="Arial" font-size="5" fill="black">-100</text><text y="10"
+                    class="xaxis" x="-90" font-family="Arial" font-size="5" fill="black">-90</text><text y="10"
+                    class="xaxis" x="-80" font-family="Arial" font-size="5" fill="black">-80</text><text y="10"
+                    class="xaxis" x="-70" font-family="Arial" font-size="5" fill="black">-70</text><text y="10"
+                    class="xaxis" x="-60" font-family="Arial" font-size="5" fill="black">-60</text><text y="10"
+                    class="xaxis" x="-50" font-family="Arial" font-size="5" fill="black">-50</text><text y="10"
+                    class="xaxis" x="-40" font-family="Arial" font-size="5" fill="black">-40</text><text y="10"
+                    class="xaxis" x="-30" font-family="Arial" font-size="5" fill="black">-30</text><text y="10"
+                    class="xaxis" x="-20" font-family="Arial" font-size="5" fill="black">-20</text><text y="10"
+                    class="xaxis" x="-10" font-family="Arial" font-size="5" fill="black">-10</text><text y="10"
+                    class="xaxis" x="0" font-family="Arial" font-size="5" fill="black">0</text><text y="10"
+                    class="xaxis" x="10" font-family="Arial" font-size="5" fill="black">10</text><text y="10"
+                    class="xaxis" x="20" font-family="Arial" font-size="5" fill="black">20</text><text y="10"
+                    class="xaxis" x="30" font-family="Arial" font-size="5" fill="black">30</text><text y="10"
+                    class="xaxis" x="40" font-family="Arial" font-size="5" fill="black">40</text><text y="10"
+                    class="xaxis" x="50" font-family="Arial" font-size="5" fill="black">50</text><text y="10"
+                    class="xaxis" x="60" font-family="Arial" font-size="5" fill="black">60</text><text y="10"
+                    class="xaxis" x="70" font-family="Arial" font-size="5" fill="black">70</text><text y="10"
+                    class="xaxis" x="80" font-family="Arial" font-size="5" fill="black">80</text><text y="10"
+                    class="xaxis" x="90" font-family="Arial" font-size="5" fill="black">90</text><text y="10"
+                    class="xaxis" x="100" font-family="Arial" font-size="5" fill="black">100</text><text y="10"
+                    class="xaxis" x="110" font-family="Arial" font-size="5" fill="black">110</text><text y="10"
+                    class="xaxis" x="120" font-family="Arial" font-size="5" fill="black">120</text><text y="10"
+                    class="xaxis" x="130" font-family="Arial" font-size="5" fill="black">130</text><text y="10"
+                    class="xaxis" x="140" font-family="Arial" font-size="5" fill="black">140</text><text y="10"
+                    class="xaxis" x="150" font-family="Arial" font-size="5" fill="black">150</text><text y="10"
+                    class="xaxis" x="160" font-family="Arial" font-size="5" fill="black">160</text><text y="10"
+                    class="xaxis" x="170" font-family="Arial" font-size="5" fill="black">170</text><text y="10"
+                    class="xaxis" x="180" font-family="Arial" font-size="5" fill="black">180</text><text y="10"
+                    class="xaxis" x="190" font-family="Arial" font-size="5" fill="black">190</text><text y="10"
+                    class="xaxis" x="200" font-family="Arial" font-size="5" fill="black">200</text>
+
+                <path
+                    d="M-200,-200 V200 M-199,-200 V200 M-198,-200 V200 M-197,-200 V200 M-196,-200 V200 M-195,-200 V200 M-194,-200 V200 M-193,-200 V200 M-192,-200 V200 M-191,-200 V200 M-190,-200 V200 M-189,-200 V200 M-188,-200 V200 M-187,-200 V200 M-186,-200 V200 M-185,-200 V200 M-184,-200 V200 M-183,-200 V200 M-182,-200 V200 M-181,-200 V200 M-180,-200 V200 M-179,-200 V200 M-178,-200 V200 M-177,-200 V200 M-176,-200 V200 M-175,-200 V200 M-174,-200 V200 M-173,-200 V200 M-172,-200 V200 M-171,-200 V200 M-170,-200 V200 M-169,-200 V200 M-168,-200 V200 M-167,-200 V200 M-166,-200 V200 M-165,-200 V200 M-164,-200 V200 M-163,-200 V200 M-162,-200 V200 M-161,-200 V200 M-160,-200 V200 M-159,-200 V200 M-158,-200 V200 M-157,-200 V200 M-156,-200 V200 M-155,-200 V200 M-154,-200 V200 M-153,-200 V200 M-152,-200 V200 M-151,-200 V200 M-150,-200 V200 M-149,-200 V200 M-148,-200 V200 M-147,-200 V200 M-146,-200 V200 M-145,-200 V200 M-144,-200 V200 M-143,-200 V200 M-142,-200 V200 M-141,-200 V200 M-140,-200 V200 M-139,-200 V200 M-138,-200 V200 M-137,-200 V200 M-136,-200 V200 M-135,-200 V200 M-134,-200 V200 M-133,-200 V200 M-132,-200 V200 M-131,-200 V200 M-130,-200 V200 M-129,-200 V200 M-128,-200 V200 M-127,-200 V200 M-126,-200 V200 M-125,-200 V200 M-124,-200 V200 M-123,-200 V200 M-122,-200 V200 M-121,-200 V200 M-120,-200 V200 M-119,-200 V200 M-118,-200 V200 M-117,-200 V200 M-116,-200 V200 M-115,-200 V200 M-114,-200 V200 M-113,-200 V200 M-112,-200 V200 M-111,-200 V200 M-110,-200 V200 M-109,-200 V200 M-108,-200 V200 M-107,-200 V200 M-106,-200 V200 M-105,-200 V200 M-104,-200 V200 M-103,-200 V200 M-102,-200 V200 M-101,-200 V200 M-100,-200 V200 M-99,-200 V200 M-98,-200 V200 M-97,-200 V200 M-96,-200 V200 M-95,-200 V200 M-94,-200 V200 M-93,-200 V200 M-92,-200 V200 M-91,-200 V200 M-90,-200 V200 M-89,-200 V200 M-88,-200 V200 M-87,-200 V200 M-86,-200 V200 M-85,-200 V200 M-84,-200 V200 M-83,-200 V200 M-82,-200 V200 M-81,-200 V200 M-80,-200 V200 M-79,-200 V200 M-78,-200 V200 M-77,-200 V200 M-76,-200 V200 M-75,-200 V200 M-74,-200 V200 M-73,-200 V200 M-72,-200 V200 M-71,-200 V200 M-70,-200 V200 M-69,-200 V200 M-68,-200 V200 M-67,-200 V200 M-66,-200 V200 M-65,-200 V200 M-64,-200 V200 M-63,-200 V200 M-62,-200 V200 M-61,-200 V200 M-60,-200 V200 M-59,-200 V200 M-58,-200 V200 M-57,-200 V200 M-56,-200 V200 M-55,-200 V200 M-54,-200 V200 M-53,-200 V200 M-52,-200 V200 M-51,-200 V200 M-50,-200 V200 M-49,-200 V200 M-48,-200 V200 M-47,-200 V200 M-46,-200 V200 M-45,-200 V200 M-44,-200 V200 M-43,-200 V200 M-42,-200 V200 M-41,-200 V200 M-40,-200 V200 M-39,-200 V200 M-38,-200 V200 M-37,-200 V200 M-36,-200 V200 M-35,-200 V200 M-34,-200 V200 M-33,-200 V200 M-32,-200 V200 M-31,-200 V200 M-30,-200 V200 M-29,-200 V200 M-28,-200 V200 M-27,-200 V200 M-26,-200 V200 M-25,-200 V200 M-24,-200 V200 M-23,-200 V200 M-22,-200 V200 M-21,-200 V200 M-20,-200 V200 M-19,-200 V200 M-18,-200 V200 M-17,-200 V200 M-16,-200 V200 M-15,-200 V200 M-14,-200 V200 M-13,-200 V200 M-12,-200 V200 M-11,-200 V200 M-10,-200 V200 M-9,-200 V200 M-8,-200 V200 M-7,-200 V200 M-6,-200 V200 M-5,-200 V200 M-4,-200 V200 M-3,-200 V200 M-2,-200 V200 M-1,-200 V200 M0,-200 V200 M1,-200 V200 M2,-200 V200 M3,-200 V200 M4,-200 V200 M5,-200 V200 M6,-200 V200 M7,-200 V200 M8,-200 V200 M9,-200 V200 M10,-200 V200 M11,-200 V200 M12,-200 V200 M13,-200 V200 M14,-200 V200 M15,-200 V200 M16,-200 V200 M17,-200 V200 M18,-200 V200 M19,-200 V200 M20,-200 V200 M21,-200 V200 M22,-200 V200 M23,-200 V200 M24,-200 V200 M25,-200 V200 M26,-200 V200 M27,-200 V200 M28,-200 V200 M29,-200 V200 M30,-200 V200 M31,-200 V200 M32,-200 V200 M33,-200 V200 M34,-200 V200 M35,-200 V200 M36,-200 V200 M37,-200 V200 M38,-200 V200 M39,-200 V200 M40,-200 V200 M41,-200 V200 M42,-200 V200 M43,-200 V200 M44,-200 V200 M45,-200 V200 M46,-200 V200 M47,-200 V200 M48,-200 V200 M49,-200 V200 M50,-200 V200 M51,-200 V200 M52,-200 V200 M53,-200 V200 M54,-200 V200 M55,-200 V200 M56,-200 V200 M57,-200 V200 M58,-200 V200 M59,-200 V200 M60,-200 V200 M61,-200 V200 M62,-200 V200 M63,-200 V200 M64,-200 V200 M65,-200 V200 M66,-200 V200 M67,-200 V200 M68,-200 V200 M69,-200 V200 M70,-200 V200 M71,-200 V200 M72,-200 V200 M73,-200 V200 M74,-200 V200 M75,-200 V200 M76,-200 V200 M77,-200 V200 M78,-200 V200 M79,-200 V200 M80,-200 V200 M81,-200 V200 M82,-200 V200 M83,-200 V200 M84,-200 V200 M85,-200 V200 M86,-200 V200 M87,-200 V200 M88,-200 V200 M89,-200 V200 M90,-200 V200 M91,-200 V200 M92,-200 V200 M93,-200 V200 M94,-200 V200 M95,-200 V200 M96,-200 V200 M97,-200 V200 M98,-200 V200 M99,-200 V200 M100,-200 V200 M101,-200 V200 M102,-200 V200 M103,-200 V200 M104,-200 V200 M105,-200 V200 M106,-200 V200 M107,-200 V200 M108,-200 V200 M109,-200 V200 M110,-200 V200 M111,-200 V200 M112,-200 V200 M113,-200 V200 M114,-200 V200 M115,-200 V200 M116,-200 V200 M117,-200 V200 M118,-200 V200 M119,-200 V200 M120,-200 V200 M121,-200 V200 M122,-200 V200 M123,-200 V200 M124,-200 V200 M125,-200 V200 M126,-200 V200 M127,-200 V200 M128,-200 V200 M129,-200 V200 M130,-200 V200 M131,-200 V200 M132,-200 V200 M133,-200 V200 M134,-200 V200 M135,-200 V200 M136,-200 V200 M137,-200 V200 M138,-200 V200 M139,-200 V200 M140,-200 V200 M141,-200 V200 M142,-200 V200 M143,-200 V200 M144,-200 V200 M145,-200 V200 M146,-200 V200 M147,-200 V200 M148,-200 V200 M149,-200 V200 M150,-200 V200 M151,-200 V200 M152,-200 V200 M153,-200 V200 M154,-200 V200 M155,-200 V200 M156,-200 V200 M157,-200 V200 M158,-200 V200 M159,-200 V200 M160,-200 V200 M161,-200 V200 M162,-200 V200 M163,-200 V200 M164,-200 V200 M165,-200 V200 M166,-200 V200 M167,-200 V200 M168,-200 V200 M169,-200 V200 M170,-200 V200 M171,-200 V200 M172,-200 V200 M173,-200 V200 M174,-200 V200 M175,-200 V200 M176,-200 V200 M177,-200 V200 M178,-200 V200 M179,-200 V200 M180,-200 V200 M181,-200 V200 M182,-200 V200 M183,-200 V200 M184,-200 V200 M185,-200 V200 M186,-200 V200 M187,-200 V200 M188,-200 V200 M189,-200 V200 M190,-200 V200 M191,-200 V200 M192,-200 V200 M193,-200 V200 M194,-200 V200 M195,-200 V200 M196,-200 V200 M197,-200 V200 M198,-200 V200 M199,-200 V200 M200,-200 V200 "
+                    stroke="blue" stroke-width="0.05" />
+                <path
+                    d="M-200,-200 H200 M-200,-199 H200 M-200,-198 H200 M-200,-197 H200 M-200,-196 H200 M-200,-195 H200 M-200,-194 H200 M-200,-193 H200 M-200,-192 H200 M-200,-191 H200 M-200,-190 H200 M-200,-189 H200 M-200,-188 H200 M-200,-187 H200 M-200,-186 H200 M-200,-185 H200 M-200,-184 H200 M-200,-183 H200 M-200,-182 H200 M-200,-181 H200 M-200,-180 H200 M-200,-179 H200 M-200,-178 H200 M-200,-177 H200 M-200,-176 H200 M-200,-175 H200 M-200,-174 H200 M-200,-173 H200 M-200,-172 H200 M-200,-171 H200 M-200,-170 H200 M-200,-169 H200 M-200,-168 H200 M-200,-167 H200 M-200,-166 H200 M-200,-165 H200 M-200,-164 H200 M-200,-163 H200 M-200,-162 H200 M-200,-161 H200 M-200,-160 H200 M-200,-159 H200 M-200,-158 H200 M-200,-157 H200 M-200,-156 H200 M-200,-155 H200 M-200,-154 H200 M-200,-153 H200 M-200,-152 H200 M-200,-151 H200 M-200,-150 H200 M-200,-149 H200 M-200,-148 H200 M-200,-147 H200 M-200,-146 H200 M-200,-145 H200 M-200,-144 H200 M-200,-143 H200 M-200,-142 H200 M-200,-141 H200 M-200,-140 H200 M-200,-139 H200 M-200,-138 H200 M-200,-137 H200 M-200,-136 H200 M-200,-135 H200 M-200,-134 H200 M-200,-133 H200 M-200,-132 H200 M-200,-131 H200 M-200,-130 H200 M-200,-129 H200 M-200,-128 H200 M-200,-127 H200 M-200,-126 H200 M-200,-125 H200 M-200,-124 H200 M-200,-123 H200 M-200,-122 H200 M-200,-121 H200 M-200,-120 H200 M-200,-119 H200 M-200,-118 H200 M-200,-117 H200 M-200,-116 H200 M-200,-115 H200 M-200,-114 H200 M-200,-113 H200 M-200,-112 H200 M-200,-111 H200 M-200,-110 H200 M-200,-109 H200 M-200,-108 H200 M-200,-107 H200 M-200,-106 H200 M-200,-105 H200 M-200,-104 H200 M-200,-103 H200 M-200,-102 H200 M-200,-101 H200 M-200,-100 H200 M-200,-99 H200 M-200,-98 H200 M-200,-97 H200 M-200,-96 H200 M-200,-95 H200 M-200,-94 H200 M-200,-93 H200 M-200,-92 H200 M-200,-91 H200 M-200,-90 H200 M-200,-89 H200 M-200,-88 H200 M-200,-87 H200 M-200,-86 H200 M-200,-85 H200 M-200,-84 H200 M-200,-83 H200 M-200,-82 H200 M-200,-81 H200 M-200,-80 H200 M-200,-79 H200 M-200,-78 H200 M-200,-77 H200 M-200,-76 H200 M-200,-75 H200 M-200,-74 H200 M-200,-73 H200 M-200,-72 H200 M-200,-71 H200 M-200,-70 H200 M-200,-69 H200 M-200,-68 H200 M-200,-67 H200 M-200,-66 H200 M-200,-65 H200 M-200,-64 H200 M-200,-63 H200 M-200,-62 H200 M-200,-61 H200 M-200,-60 H200 M-200,-59 H200 M-200,-58 H200 M-200,-57 H200 M-200,-56 H200 M-200,-55 H200 M-200,-54 H200 M-200,-53 H200 M-200,-52 H200 M-200,-51 H200 M-200,-50 H200 M-200,-49 H200 M-200,-48 H200 M-200,-47 H200 M-200,-46 H200 M-200,-45 H200 M-200,-44 H200 M-200,-43 H200 M-200,-42 H200 M-200,-41 H200 M-200,-40 H200 M-200,-39 H200 M-200,-38 H200 M-200,-37 H200 M-200,-36 H200 M-200,-35 H200 M-200,-34 H200 M-200,-33 H200 M-200,-32 H200 M-200,-31 H200 M-200,-30 H200 M-200,-29 H200 M-200,-28 H200 M-200,-27 H200 M-200,-26 H200 M-200,-25 H200 M-200,-24 H200 M-200,-23 H200 M-200,-22 H200 M-200,-21 H200 M-200,-20 H200 M-200,-19 H200 M-200,-18 H200 M-200,-17 H200 M-200,-16 H200 M-200,-15 H200 M-200,-14 H200 M-200,-13 H200 M-200,-12 H200 M-200,-11 H200 M-200,-10 H200 M-200,-9 H200 M-200,-8 H200 M-200,-7 H200 M-200,-6 H200 M-200,-5 H200 M-200,-4 H200 M-200,-3 H200 M-200,-2 H200 M-200,-1 H200 M-200,0 H200 M-200,1 H200 M-200,2 H200 M-200,3 H200 M-200,4 H200 M-200,5 H200 M-200,6 H200 M-200,7 H200 M-200,8 H200 M-200,9 H200 M-200,10 H200 M-200,11 H200 M-200,12 H200 M-200,13 H200 M-200,14 H200 M-200,15 H200 M-200,16 H200 M-200,17 H200 M-200,18 H200 M-200,19 H200 M-200,20 H200 M-200,21 H200 M-200,22 H200 M-200,23 H200 M-200,24 H200 M-200,25 H200 M-200,26 H200 M-200,27 H200 M-200,28 H200 M-200,29 H200 M-200,30 H200 M-200,31 H200 M-200,32 H200 M-200,33 H200 M-200,34 H200 M-200,35 H200 M-200,36 H200 M-200,37 H200 M-200,38 H200 M-200,39 H200 M-200,40 H200 M-200,41 H200 M-200,42 H200 M-200,43 H200 M-200,44 H200 M-200,45 H200 M-200,46 H200 M-200,47 H200 M-200,48 H200 M-200,49 H200 M-200,50 H200 M-200,51 H200 M-200,52 H200 M-200,53 H200 M-200,54 H200 M-200,55 H200 M-200,56 H200 M-200,57 H200 M-200,58 H200 M-200,59 H200 M-200,60 H200 M-200,61 H200 M-200,62 H200 M-200,63 H200 M-200,64 H200 M-200,65 H200 M-200,66 H200 M-200,67 H200 M-200,68 H200 M-200,69 H200 M-200,70 H200 M-200,71 H200 M-200,72 H200 M-200,73 H200 M-200,74 H200 M-200,75 H200 M-200,76 H200 M-200,77 H200 M-200,78 H200 M-200,79 H200 M-200,80 H200 M-200,81 H200 M-200,82 H200 M-200,83 H200 M-200,84 H200 M-200,85 H200 M-200,86 H200 M-200,87 H200 M-200,88 H200 M-200,89 H200 M-200,90 H200 M-200,91 H200 M-200,92 H200 M-200,93 H200 M-200,94 H200 M-200,95 H200 M-200,96 H200 M-200,97 H200 M-200,98 H200 M-200,99 H200 M-200,100 H200 M-200,101 H200 M-200,102 H200 M-200,103 H200 M-200,104 H200 M-200,105 H200 M-200,106 H200 M-200,107 H200 M-200,108 H200 M-200,109 H200 M-200,110 H200 M-200,111 H200 M-200,112 H200 M-200,113 H200 M-200,114 H200 M-200,115 H200 M-200,116 H200 M-200,117 H200 M-200,118 H200 M-200,119 H200 M-200,120 H200 M-200,121 H200 M-200,122 H200 M-200,123 H200 M-200,124 H200 M-200,125 H200 M-200,126 H200 M-200,127 H200 M-200,128 H200 M-200,129 H200 M-200,130 H200 M-200,131 H200 M-200,132 H200 M-200,133 H200 M-200,134 H200 M-200,135 H200 M-200,136 H200 M-200,137 H200 M-200,138 H200 M-200,139 H200 M-200,140 H200 M-200,141 H200 M-200,142 H200 M-200,143 H200 M-200,144 H200 M-200,145 H200 M-200,146 H200 M-200,147 H200 M-200,148 H200 M-200,149 H200 M-200,150 H200 M-200,151 H200 M-200,152 H200 M-200,153 H200 M-200,154 H200 M-200,155 H200 M-200,156 H200 M-200,157 H200 M-200,158 H200 M-200,159 H200 M-200,160 H200 M-200,161 H200 M-200,162 H200 M-200,163 H200 M-200,164 H200 M-200,165 H200 M-200,166 H200 M-200,167 H200 M-200,168 H200 M-200,169 H200 M-200,170 H200 M-200,171 H200 M-200,172 H200 M-200,173 H200 M-200,174 H200 M-200,175 H200 M-200,176 H200 M-200,177 H200 M-200,178 H200 M-200,179 H200 M-200,180 H200 M-200,181 H200 M-200,182 H200 M-200,183 H200 M-200,184 H200 M-200,185 H200 M-200,186 H200 M-200,187 H200 M-200,188 H200 M-200,189 H200 M-200,190 H200 M-200,191 H200 M-200,192 H200 M-200,193 H200 M-200,194 H200 M-200,195 H200 M-200,196 H200 M-200,197 H200 M-200,198 H200 M-200,199 H200 M-200,200 H200"
+                    stroke="blue" stroke-width="0.05" />
+            </g>
+        </svg>
+    </div>
+
+
+    <div id="makingnewboxes">
+        <div class="inputting">
+            <div>Function</div>
+            <input type="text" class="functionid" id="newest">
+            <div class="submit">Submit</div>
+            <button class="button">+</button>
+        </div>
+    </div>
+
+    <div class="caution">
+        Drawback and Caution
+    </div>
+
+    <div class="importantnotice nonei">
+        <ol type="1">
+            <li>Note that at every expression such as x^2 + 10x + 20 should be written as x*x+10*x+20</li>
+            <li>At every situation where you know there is multiplication and in algebra this is not denoted but in this
+                graph
+                this is must condition for making any graph</li>
+            <li>This graph deals with only continuous function</li>
+            <li>Some of the function which are represented as given below
+                <div>
+
+                    <ol type="a">
+                        <li>asin for inverse sin</li>
+                        <li>sinh for hyperbolic sin</li>
+                        <li>abs for absolute</li>
+                        <li>floor for gif</li>
+                        <li>ceil for fpf</li>
+                        <li>sqrt for square root</li>
+                        <li>pow(x,y) for x^y</li>
+                        <li>PI for pi</li>
+                        <li>log for log base 10</li>
+                        <li>log2 for log base 2</li>
+                    </ol>
+                </div>
+            </li>
+            <li>In case of discontinuous funtion it may behave irregular or not too much clear at point of discontnuity
+            </li>
+            <li>In the input you have only enter the expression of x which is treated as y= expression of x which in
+                inputed
+                in textarea</li>
+            <li>In this graph you cannot make the inequality</li>
+            <li>In this graph you can zoom by only zooming as image </li>
+        </ol>
+    </div>
+
+
+    <div class="option">
+        <select name="select" id="selected" onchange="sizehaschanged()">
+            <option value="0">grid of 1*1 default</option>
+            <option value="6">grid of 0.001*0.001</option>
+            <option value="5">grid of 0.01*0.01</option>
+            <option value="4">grid of 0.1*0.1</option>
+            <option value="1">grid of 10*10</option>
+            <option value="2">grid of 100*100</option>
+            <option value="3">grid of 1000*1000</option>
+        </select>
+    </div>
+
+
+    <script>
+        let count = 0;
+        let activegraph = 0;
+        let box = document.getElementsByClassName("functionid");
+        function randomcolor() {
+            return "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+        }
+
+        document.querySelector(".caution").addEventListener("click", () => {
+            document.getElementsByClassName('importantnotice')[0].classList.toggle('nonei')
+        })
+
+        let button = document.querySelectorAll(".button");
+        let submit = document.querySelectorAll(".submit");
+        for (let index = 0; index < button.length; index++) {
+            button[index].addEventListener("click", () => {
+                makingnewboxes()
+            });
+        }
+        for (let inde = 0; inde < submit.length; inde++) {
+            submit[inde].addEventListener("click", () => {
+                makegraph(inde)
+            });
+        }
+        function makingnewboxes() {
+            count++;
+            let div = document.createElement("div")
+            div.classList.add("inputting"),
+                div.innerHTML = `<div>Function</div>
+    <input type="text" class="functionid">
+    <div class="submit" onclick='makegraph(`+ count + `)'>Submit</div>
+    <button class="button" onclick="makingnewboxes()">+</button>`
+            let g = `<polyline class="graphof" points="" fill="none" stroke="black" stroke-width="0.5"/>`
+            document.getElementById("makingnewboxes").append(div)
+            let color = randomcolor();
+            document.getElementById("graphing").querySelectorAll(".graphof")[count].setAttribute("stroke", color)
+            document.querySelectorAll(".functionid")[count].style.border = "2px solid " + color
+        }
+
+        function makepoints(numberofgiven) {
+            let pointstring = '';
+            let graph = document.getElementsByClassName("functionid")[numberofgiven].value;
+            graph = conversionofstringintostandard(graph)
+            for (let i = -2000; i <= 2000; i++) {
+                i = i / 10
+                let ydas = makevalues(-1 * i, graph)
+                let str = conversiontograph(i, ydas);
+                pointstring = pointstring + str;
+                i = 10 * i
+            }
+            return pointstring;
+
+        }
+
+        function makevalues(y, graph) {
+            const sanitizedExpression = graph.replace(/x/g, `(${y})`);
+            const result = eval(sanitizedExpression);
+            return result;
+
+        }
+
+
+        function conversiontograph(x, y) {
+            let str = ""
+            if (y == NaN) {
+                return str;
+            }
+            else {
+                let str = -1 * x + "," + -1 * y + " "
+                return str;
+            }
+
+        }
+
+
+        function makegraph(numberofgiven) {
+            let pointstring = makepoints(numberofgiven);
+            document.getElementsByClassName("graphof")[numberofgiven].setAttribute("points", pointstring)
+        }
+
+        let arrayofobject = [["Math.sin", "sin"], ["Math.cos", "cos"], ["Math.tan", "tan"], ["1/Math.sin", "cosec"], ["1/Math.cos", "sec"], ["1/Math.tan", "cot"], ["Math.log", "ln"], ["Math.log10", "log"], ["Math.log2", "log2"], ["Math.abs", "abs"], ["Math.floor", "floor"], ["Math.ceil", "ceil"], ["Math.PI", "PI"], ["Math.E", "e"], ["Math.sqrt", "sqrt"], ["Math.pow", "pow"], ["Math.round", "roundoff"], ["Math.asin", "asin"], ["Math.atan", "atan"], ["Math.acos", "acos"]]
+
+        function conversionofstringintostandard(x) {
+            for (let index = 0; index < arrayofobject.length; index++) {
+                x = x.replace(arrayofobject[index][1], arrayofobject[index][0])
+            }
+
+            switch (activegraph) {
+                case 0:
+                    x = 1 + "*(" + x + ")"
+                    break;
+                case 1:
+                    x = x.replace("x", "0.1*x")
+                    x = 10 + "*(" + x + ")"
+                    break;
+                case 2:
+                    x = x.replace("x", "0.01*x")
+                    x = 100 + "*(" + x + ")"
+                    break;
+                case 3:
+                    x = x.replace("x", "0.001*x")
+                    x = 1000 + "*(" + x + ")"
+                    break;
+                case 4:
+                    x = x.replace("x", "10*x")
+                    x = 0.1 + "*(" + x + ")"
+                    break;
+                case 5:
+                    x = x.replace("x", "100*x")
+                    x = 0.01 + "*(" + x + ")"
+                    break;
+                case 6:
+                    x = x.replace("x", "1000*x")
+                    x = 0.001 + "*(" + x + ")"
+                    break;
+            }
+
+            return x;
+        }
+
+
+        function sizehaschanged() {
+            let valueofselected = document.getElementById("selected").value;
+            activegraph = Number(valueofselected)
+            for (let index = 0; index < box.length; index++) {
+                makegraph(index)
+            }
+            let xaxis = document.getElementsByClassName("xaxis")
+            let yaxis = document.getElementsByClassName("yaxis")
+
+            switch (activegraph) {
+                case 0:
+                    for (let index = -20; index < 21; index++) {
+                        xaxis[index + 20].innerHTML = index * 10
+                        yaxis[index + 20].innerHTML = -10 * index
+                    }
+                    break;
+                case 1:
+                    for (let index = -20; index < 21; index++) {
+                        xaxis[index + 20].innerHTML = index * 1
+                        yaxis[index + 20].innerHTML = -1 * index
+                    }
+                    break;
+                case 2:
+                    for (let index = -20; index < 21; index++) {
+                        xaxis[index + 20].innerHTML = index / 10
+                        yaxis[index + 20].innerHTML = index / (-10)
+                    }
+                    break;
+                case 3:
+                    for (let index = -20; index < 21; index++) {
+                        xaxis[index + 20].innerHTML = index / 100
+                        yaxis[index + 20].innerHTML = index / (-100)
+                    }
+                    break;
+                case 4:
+                    for (let index = -20; index < 21; index++) {
+                        xaxis[index + 20].innerHTML = index * 100
+                        yaxis[index + 20].innerHTML = -100 * index
+                    }
+                    break;
+                case 5:
+                    for (let index = -20; index < 21; index++) {
+                        xaxis[index + 20].innerHTML = index * 1000
+                        yaxis[index + 20].innerHTML = -1000 * index
+                    }
+                    break;
+                case 6:
+                    for (let index = -20; index < 21; index++) {
+                        xaxis[index + 20].innerHTML = index * 10000
+                        yaxis[index + 20].innerHTML = -10000 * index
+                    }
+                    break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
